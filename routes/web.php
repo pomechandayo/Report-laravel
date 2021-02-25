@@ -16,4 +16,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/hello', 'LineBotController@index');
+
+Route::get('/','ReportController@index');
