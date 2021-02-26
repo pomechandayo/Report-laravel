@@ -17,4 +17,8 @@ Route::get('/', function () {
 
 
 
-Route::get('/','ReportController@index');
+Route::get('/','ReportController@index')->name('index');
+Route::post('/report','ReportController@postreport')
+->name('report');
+Route::get('confirm','reportController@showConfirm')->name('confirm');
+Route::post('confirm','reportController@postConfirm')->name('confirm');
