@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Requests\reportRequest;
+use App\Mail\reportMail;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
 use DateTime;
+
 
 class ReportController extends Controller
 {
@@ -27,6 +31,22 @@ class ReportController extends Controller
     {
         $sessionData = $request->session()->get('report');
         $message = view('emails.report',$sessionData);
-        return view('comfirm',['message' => $message]);
+        return view('confirm',['message' => $message]);
+    }
+
+    public function postConfirm(Request $request)
+    {   
+        $sessionData = $request->session()->get('report');
+        $request->session()->forget('report');
+        
+        Mail::to($sessionData['email'])
+        ->send(new reportMail($sessionData));
+        
+        return redirect(route('sent'));
+    }
+
+    public function showSentMessage()
+    {
+        return view('sent');
     }
 }

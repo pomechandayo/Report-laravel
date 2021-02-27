@@ -14,7 +14,7 @@
 @csrf
 <div class="form-group">
   <label for="email">To</label>
-  <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="メールアドレス" value="@gmail"/>
+  <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="メールアドレス" value="ohaoha.0610@gmail.com"/>
   <div class="invalid-feedback">
     @error('email')
       {{$message}}
@@ -24,7 +24,7 @@
 
 <div class="form-group">
   <label for="Cc">Cc</label>
-  <input type="text" name="Cc" class="form-control @error('email') is-invalid @enderror" id="Cc" placeholder="メールアドレス" value="@gmail@gmail@gmail@gmail"/>
+  <input type="text" name="Cc" class="form-control @error('email') is-invalid @enderror" id="Cc" placeholder="メールアドレス" value="a@gmail"/>
   <div class="invalid-feedback">
     @error('email')
       {{$message}}

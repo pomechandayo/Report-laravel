@@ -26,6 +26,7 @@ class reportRequest extends FormRequest
     {
         return [
             'email' => ['required','email'],
+            'Cc'  => ['required','email'],
             'title' => ['required','string'],
             'text' => ['required','string'],
         ];
