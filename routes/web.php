@@ -19,6 +19,6 @@ Route::get('/', function () {
 Route::get('/','ReportController@index')->name('index')->middleware('index.basic');
 Route::post('/report','ReportController@postreport')
 ->name('report');
-Route::get('confirm','reportController@showConfirm')->name('confirm');
-Route::post('confirm','reportController@postConfirm')->name('confirm');
-Route::get('sent','reportController@showSentMessage')->name('sent');
+Route::get('confirm','ReportController@showConfirm')->name('confirm');
+Route::post('confirm','ReportController@postConfirm')->name('confirm');
+Route::get('sent','ReportController@showSentMessage')->name('sent');
