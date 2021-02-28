@@ -16,9 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/login','ReportController@showloginForm');
-Route::post('/login','ReportController@login');
-Route::get('/','ReportController@index')->name('index');
+Route::get('/','ReportController@index')->name('index')->middleware('index.basic');
 Route::post('/report','ReportController@postreport')
 ->name('report');
 Route::get('confirm','reportController@showConfirm')->name('confirm');

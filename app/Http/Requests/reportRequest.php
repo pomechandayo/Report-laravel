@@ -25,8 +25,9 @@ class reportRequest extends FormRequest
     public function rules()
     {
         return [
+            
             'email' => ['required','email'],
-            'Cc'  => ['required','email'],
+            'Cc'  => ['required','string'],
             'title' => ['required','string'],
             'text' => ['required','string'],
         ];
