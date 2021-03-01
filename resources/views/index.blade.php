@@ -22,7 +22,7 @@
 
 <div class="form-group">
   <label for="email">To</label>
-  <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="メールアドレス" value="ohaoha.0610@gmail.com"/>
+  <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="メールアドレス" value=""/>
   <div class="invalid-feedback">
     @error('email')
       {{$message}}

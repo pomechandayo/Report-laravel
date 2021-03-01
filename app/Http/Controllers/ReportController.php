@@ -18,7 +18,7 @@ class ReportController extends Controller
      {
 
 $sessionData = $request->session()->get('report');
-$Cc = 'pomechan.0505@icloud.com,teameverest.iunmm.reiwa3y1m.h@gmail.com'; 
+$Cc = ""; 
 
 if(is_null($sessionData)){
 $tex = 'です。
