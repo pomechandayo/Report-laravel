@@ -14,7 +14,7 @@
 @csrf
 <select class="form-select" id="name" name = "name" aria-label="Default select example">
   <option selected>名前</option>
-  <option value="政">政</option>
+  <option value="鳥">鳥</option>
   <option value="犬">犬</option>
   <option value="猫">猫</option>
   <option value="4"></option>
@@ -80,7 +80,7 @@
   let select = document.querySelector('[id="name"]')
   let text = document.querySelector('[name="text"]')
   let title = document.querySelector('[name="title"]')
-  let text_begi = 'お疲れ様です。「Everest」の'
+  let text_begi = 'お疲れ様です。「Animars」の'
     select.onchange = event => {
     let name = select.value;
     let tit = title.innerHTML;
